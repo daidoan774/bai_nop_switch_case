@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hãy nhập giá</h1>
+    <input type="text"  id="name">
+    <button onclick="chon_gia()">Xem Giá</button>
+
+    <span id="ket_qua"></span>
+    <script>
+        function chon_gia(){
+            let name = document.getElementById("name").value;
+            let ketqua = document.getElementById("ket_qua");
+            switch(name)
+            {
+            case "ổi":
+                case "Dưa Hấu":
+                ketqua.innerHTML = "<h1>20.000 VNĐ/kg</h1>";
+                break;
+                case "Táo":
+                case "Xoài":
+                    ketqua.innerHTML ="<h1>30.000 VNĐ/kg</h1>";
+                    break;
+                    case "Cam":
+                        case "Chôm Chôm":
+                        ketqua.innerHTML ="<h1>40.000 VNĐ/kg</h1>";
+                        break;
+                        case "Măng Cụt":
+                        ketqua.innerHTML ="<h1>50.000 VNĐ/kg</h1>";
+                        break;
+                        default:
+                            ketqua.innerHTML = "Hãy Nhập Tên "
+        }
+        }
+    </script>
+</body>
+</html>

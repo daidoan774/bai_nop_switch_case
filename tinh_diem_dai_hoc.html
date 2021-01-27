@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính Điểm Đại Học Khối D</h1>
+    Môn Toán <input type="text" id="toan"><br>
+    Môn Văn <input type="text"  id="van"><br>
+    Môn Anh <input type="text"  id="anh"><br>
+    Khu Vực  <select name="khuvuc" id="kv" onchange="tinh()" >
+        <option value="1">kv1</option>
+        <option value="2">kv2-NT</option>
+        <option value="3">kv2</option>
+        <option value="4">kv3</option>
+    </select>
+    <button onclick="tinh()">Tính Điểm</button>
+    <br>
+    <span id="ket_qua">`<h3 style="color: red;">Tổng Điểm Đại Học Của Bạn Là:</h3>`</span>
+    
+    <script>
+        function tinh()
+        {
+            let diemtoan = Number(document.getElementById("toan").value);
+            let diemvan = Number(document.getElementById("van").value);
+            let diemanh = Number(document.getElementById("anh").value);
+
+            let khu_vuc = Number(document.getElementById("kv").value);    
+    
+            let tong = diemtoan + diemvan + diemanh;
+            let ketqua = document.getElementById("ket_qua");
+
+
+            switch(khu_vuc)
+           {
+               case 1:
+                   ketqua.innerHTML = tong + 0.75;
+                   break;
+                   case 2:
+                       ketqua.innerHTML =  tong + 0.5;
+                       break;
+                       case 3:
+                           ketqua.innerHTML = tong +0.25;
+                           break;
+                           case 4:
+                               ketqua.innerHTML = tong ;
+                               break;
+           }
+        }
+    </script>
+</body>
+</html>

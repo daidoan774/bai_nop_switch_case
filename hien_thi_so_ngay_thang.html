@@ -1,0 +1,40 @@
+<html>
+    <head><title>Hiển Thị số ngày trong tháng</title></head>
+    <body>
+        <label >hãy nhập tháng:</label>
+        <input type="text" id = "nhap">
+        <button id = "xuat" onclick="out()" style="background-color: #f12322;">Xem</button><br>
+        <span id ="kq"></span>
+        <script>
+            function out(){
+            let thang = Number(document.getElementById("nhap").value);
+            let end = document.getElementById("kq");
+            switch(thang){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                end.innerHTML ="Tháng" +" " + thang + " Đây là tháng có 31 ngày";
+                    break;
+                    case 2:
+                    end.innerHTML = "Tháng" + " " +thang +"Đây là tháng có 28 hoặc 29 ngày";
+                        break;
+                        case 4:
+                        case 6:
+                        case 9:
+                        case 11:
+                        end.innerHTML = "Tháng"+" " + thang +"Đây là tháng có 30 ngày";
+                            break;
+                            default:
+                            end.innerHTML = " Bạn hãy nhập lại";
+                            break;
+            }
+        }
+            
+        </script>
+        
+    </body>
+</html>
